@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <!-- <div> -->
+      <!-- <div class="side-nav">
+        <i class="fa-solid fa-gauge icon" style="color: blue"></i>
+      </div> -->
+      <div class="side-nav">
+        <i class="fa-solid fa-house icon"></i>
+      </div>
+      <div class="side-nav">
+        <i class="fa-solid fa-chart-pie icon"></i>
+      </div>
+      <div class="side-nav">
+        <i class="fa-solid fa-suitcase icon"></i>
+      </div>
+      <div class="side-nav">
+        <i class="fa-solid fa-calendar-check icon"></i>
+      </div>
+      <div class="side-nav">
+        <i class="fa-solid fa-gear icon"></i>
+      </div>
+      <!-- </div> -->
+    </section>
+    <div class="full-container">
+      <div>
+        <section class="navbar">
+          <div class="nav-container">
+            <div>
+              <span
+                ><i class="fa-solid fa-gauge icon" style="color: blue"></i
+              ></span>
+              <span class="nav-text" style="margin-left: 20px">Dasboard</span>
+            </div>
+            <div class="nav-right">
+              <div class="nav-right-container">
+                <i class="fa-solid fa-bell icon"></i>
+              </div>
+              <div class="nav-right-container">
+                <img class="user-image" src="./ankit.jpg" />
+              </div>
+              <div class="nav-right-container">
+                <div class="user-name">Ankit</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div style="margin-left:50px">
+        <div class="top-container">
+          <div class="property">
+            <div class="prop-tags">
+              <div class="prop-tag">Top Picks</div>
+              <div class="prop-tag">Featured</div>
+            </div>
+            <div class="prop-contents">
+              <div class="props-data">
+                <p class="prop-name">House Andromeda</p>
+                <div class="prop-ratings">
+                  <div class="rate">1.44</div>
+                  <div class="rate">
+                    <i class="fa-solid fa-star rate-star"></i
+                    ><i class="fa-solid fa-star rate-star"></i
+                    ><i class="fa-solid fa-star rate-star"></i
+                    ><i class="fa-solid fa-star rate-star"></i
+                    ><i class="fa-solid fa-star rate-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="prop-dealer">
+                <div class="profile">
+                  <i
+                    class="fa-solid fa-circle-user"
+                    style="color: rgb(0, 0, 236); font-size: 3rem"
+                  ></i>
+                </div>
+                <div class="profile">
+                  <i
+                    class="fa-solid fa-camera"
+                    style="color: rgb(8, 8, 177); font-size: 3rem"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="charts-container" style="flex: 5">
+            <div class="property-1">
+              <div class="propertyRow-1">
+                <i
+                  class="fa-solid fa-cash-register property-box-iconYellow"
+                ></i>
+
+                <div class="property-box-1">
+                  <div class="box-col">
+                    <p>Total</p>
+                  </div>
+                  <div class="box-col">
+                    <div class="box-col-container">
+                      <i
+                        class="fa-solid fa-cash-register box-register-yellow"
+                      ></i>
+                      <p class="box-yellow">0.56 Ether</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="propertyRow-1">
+                <i class="fa-solid fa-cash-register property-box-iconGreen"></i>
+                <div class="property-box-1">
+                  <div class="box-col">
+                    <p>weekly</p>
+                  </div>
+                  <div class="box-col">
+                    <div class="box-col-container">
+                      <i
+                        class="fa-solid fa-cash-register box-register-green"
+                      ></i>
+                      <p class="box-green">0.45 Ether</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="propertyRow-1">
+                <i class="fa-solid fa-cash-register property-box-iconRed"></i>
+                <div class="property-box-1">
+                  <div class="box-col">
+                    <p>Expenses</p>
+                  </div>
+                  <div class="box-col">
+                    <div class="box-col-container">
+                      <i class="fa-solid fa-cash-register box-register-red"></i>
+                      <p class="box-red">0.56 Ether</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <canvas
+              id="myChart"
+              style="
+                display: flex;
+                flex: 2;
+                width: 5px;
+                max-width: 60px;
+                height: 70px;
+                max-height: 30vh;
+              "
+            ></canvas>
+          </div>
+        </div>
+        <div class="left-bar">
+          <canvas
+            id="lineChart"
+            style="
+              display: flex;
+              flex: 2;
+              width: 5px;
+              max-width: 560px;
+              height: 200px;
+              max-height: 30vh;
+              margin-left: 30px;
+            "
+          ></canvas>
+          <div class="rate-group">
+            <div class="left-bar-box">
+              <div class="left-bar-wrapper">
+                <p class="left-bar-row left-bar-text-1">Roma</p>
+                <p class="left-bar-row left-bar-text-2">
+                  <i class="fa-solid fa-cash-register"></i>0.91 Ether
+                </p>
+              </div>
+              <div class="right-bar-wrapper bar-green">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="trend-up-text">+10%</div>
+              </div>
+            </div>
+            <div class="left-bar-box">
+              <div class="left-bar-wrapper">
+                <p class="left-bar-row left-bar-text-1">Thorian</p>
+                <p class="left-bar-row left-bar-text-2">
+                  <i class="fa-solid fa-cash-register"></i>0.81 Ether
+                </p>
+              </div>
+              <div class="right-bar-wrapper bar-green">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="trend-up-text">+19%</div>
+              </div>
+            </div>
+            <div class="left-bar-box">
+              <div class="left-bar-wrapper">
+                <p class="left-bar-row left-bar-text-1">Linda</p>
+                <p class="left-bar-row left-bar-text-2">
+                  <i class="fa-solid fa-cash-register"></i>1.1 Ether
+                </p>
+              </div>
+              <div class="right-bar-wrapper bar-red">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="trend-up-text">-17%</div>
+              </div>
+            </div>
+            <div class="left-bar-box">
+              <div class="left-bar-wrapper">
+                <p class="left-bar-row left-bar-text-1">Villa</p>
+                <p class="left-bar-row left-bar-text-2">
+                  <i class="fa-solid fa-cash-register"></i>0.71 Ether
+                </p>
+              </div>
+              <div class="right-bar-wrapper bar-green">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="trend-up-text">+22%</div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-container" style="float: right;margin-top: 8rem;width: 30vw;  margin-left: 5rem;">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="card">
+            <div class="card-1">
+            <p class="card-text-1">Balance</p>
+            <p class="price-1">$521,621</p>
+            </div>
+            <div class="card-1">
+            <p class="card-text-2">Monthly</p>
+            <p class="price-2">$14,255</p><div class="percent-tag">+10%</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="card">
+          <div class="card-1">
+          <p class="card-text-1">Balance</p>
+          <p class="price-1">$321,621</p>
+          </div>
+          <div class="card-1">
+          <p class="card-text-2">Monthly</p>
+           <p class="price-2">$14,255</p><div class="percent-tag">+10%</div>
+           </div>
+        </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="card">
+          <div class="card-1">
+          <p class="card-text-1">Balance</p>
+          <p class="price-1">$621,621</p>
+          </div>
+          <div class="card-1">
+          <p class="card-text-2">Monthly</p>
+           <p class="price-2">$14,255</p><div class="percent-tag">+10%</div>
+           </div>
+        </div>
+        </div>
+        </div>
+        
+        <br>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        
+        <div class="right-bottom">
+
+          <div class="right-container-box">
+            <div class="right-green">
+              <div class="right-green-text1" style="font-size: 2rem;font-weight:bold;">Roma</div>
+              <div class="right-conitner-text2">
+                  <span style="font-size: 1.5rem">$5.236 </span>
+                  <span> 0.8732 Ether <i class="fad fa-arrow-right"></i> </span>
+                 
+              </div>
+            </div>
+            </div>
+        
+          <div class="right-container-box">
+            <div class="right-green">
+              <div class="right-green-text1" style="font-size: 2rem;font-weight:bold;">Atlas</div>
+              <div class="right-conitner-text2">
+                  <span style="font-size: 1.5rem">$5.236 </span>
+                  <span> 0.8732 Ether <i class="fad fa-arrow-right"></i> </span>
+                 
+              </div>
+            </div>
+            </div>
+          
+            <div class="right-container-box">
+              <div class="right-green">
+                <div class="right-green-text1" style="font-size: 2rem;font-weight:bold;">Germanian</div>
+                <div class="right-conitner-text2">
+                    <span style="font-size: 1.5rem">$5.236 </span>
+                    <span> 0.8732 Ether <i class="fad fa-arrow-right"></i> </span>
+                   
+                </div>
+              </div>
+              </div>
+          
+              <div class="right-container-box">
+                <div class="right-green">
+                  <div class="right-green-text1" style="font-size: 2rem;font-weight:bold;">Heavens</div>
+                  <div class="right-conitner-text2">
+                      <span style="font-size: 1.5rem">$5.236 </span>
+                      <span> 0.8732 Ether <i class="fad fa-arrow-right"></i> </span>
+                     
+                  </div>
+                </div>
+                </div>
+          
+                <div class="right-container-box">
+                  <div class="right-green">
+                    <div class="right-green-text1" style="font-size: 2rem;font-weight:bold;">Heretho</div>
+                    <div class="right-conitner-text2">
+                        <span style="font-size: 1.5rem">$5.236 </span>
+                        <span> 0.8732 Ether <i class="fad fa-arrow-right"></i> </span>
+                       
+                    </div>
+                  </div>
+                  </div>
+        </div>
+        
+        </div>
+
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
